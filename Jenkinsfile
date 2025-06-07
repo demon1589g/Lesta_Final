@@ -21,11 +21,10 @@ pipeline {
             }
         }
 
-        stage('Lint') {
-            steps {
-                sh "docker run --rm -v \$PWD:/app -w /app flask-api pip install flake8"
-       		sh "docker run --rm -v \$PWD:/app -w /app flask-api flake8 ."
-            }
+	stage('Lint') {
+    	    steps {
+        	sh "docker run --rm -v \$PWD:/app -w /app flask-api flake8 ."
+   	    }
         }
 
         stage('Push') {
