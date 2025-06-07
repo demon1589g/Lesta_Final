@@ -43,4 +43,4 @@ curl http://localhost:5000/results
 ## Финальные данные
 
 - Репозиторий: https://github.com/demon1589g/Lesta_Final.git  
-- Эндпоинт: http://<IP>:5000/results
+- Эндпоинт: http://37.9.53.201:8080/view/all/job/lesta_final/
