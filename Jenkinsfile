@@ -45,7 +45,9 @@ pipeline {
                     ssh -o StrictHostKeyChecking=no ubuntu@${SERVER_IP} '
                         docker stop flask-api || true && docker rm flask-api || true
                         docker pull ${REGISTRY}/${IMAGE_NAME}:latest
-                        docker run -d --name flask-api -p 5000:5000 ${REGISTRY}/${IMAGE_NAME}:latest
+                        docker run -d --name flask-api -p 5000:5000 \
+  			  -e DATABASE_URL=sqlite:////app/test.db \
+                           ${REGISTRY}/${IMAGE_NAME}:latest
                     '
                     """
                 }
