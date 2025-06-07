@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+	stage('Prepare ENV') {
+            steps {
+                sh "cp .env.example .env"
+            }
+        }
+
         stage('Build') {
             steps {
                 sh "docker build -t ${IMAGE_NAME} ."
