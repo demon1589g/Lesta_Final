@@ -8,4 +8,3 @@ class Result(db.Model):
     name = db.Column(db.String(100))
     score = db.Column(db.Integer)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-
