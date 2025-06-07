@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = "flask-api"
-        REGISTRY = "docker.io/<твое-имя-пользователя-dockerhub>" // Укажи своё имя DockerHub
+        REGISTRY = https://hub.docker.com/u/demon1589g
         SERVER_IP = "37.9.53.201"
         SSH_CREDENTIALS_ID = 'jenkins-ssh'
     }
